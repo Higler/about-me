@@ -1,14 +1,18 @@
 'use strict';
 
+//Opening Question
 let person = prompt('What is your name?');
 
 alert('Its very nice to meet you ' + person);
 
 console.log(person);
 
+// Question 1
 let years = prompt ('Do you think I have been writing code for 20 years?');
 
 let normalizedyears = years.toLowerCase();
+
+let correctcount = 0;
 
 console.log(years);
 
@@ -21,9 +25,12 @@ if(normalizedyears === 'yes'){
   alert('Incorrect');
 }
 
+//Question 2
 let weird = prompt ('Would you beleive I can not only build a race car but also a video game?');
 
 let normalizedweird = weird.toLowerCase();
+
+let correctcount = 0;
 
 console.log(weird);
 
@@ -36,9 +43,12 @@ if(normalizedweird === 'yes'){
   alert('Incorrect');
 }
 
+//Question 3
 let plane = prompt ('Do you think I have launched air planes from the flight deck of a carrier?');
 
 let normalizedplane = plane.toLowerCase();
+
+let correctcount = 0;
 
 console.log(plane);
 
@@ -51,9 +61,12 @@ if(normalizedplane === 'yes'){
   alert('Incorrect');
 }
 
+//Question 4
 let cookies = prompt ('Do you think I can bake the premade cookies?');
 
 let normalizedcookies = cookies.toLowerCase();
+
+let correctcount = 0;
 
 console.log(cookies);
 
@@ -66,9 +79,12 @@ if(normalizedcookies === 'no'){
   alert('Incorrect');
 }
 
+//Question 5
 let doggy = prompt ('Do you think I had a dog that was in the news paper and called a local hero?');
 
 let normalizeddoggy = doggy.toLowerCase();
+
+let correctcount = 0;
 
 console.log(doggy);
 
@@ -81,8 +97,85 @@ if(normalizeddoggy === 'yes'){
   alert('Incorrect');
 }
 
-let number = prompt('How many did you get correct?');
+//Question 6
+const statesvisited = 37;
 
-alert( number +' Wow really thats awesome! Thank you for coming' + person);
+const maxattempts = 4;
 
-console.log(number);
+let attempts = 0;
+
+let correctcount = 0;
+
+function guessNumber() {
+  if (attempts < maxattempts) {
+    console.log( message );
+    const userguess = prompt(`How many states have I visited? You have ${maxattempts - attempts} attempt(s) left:`);
+    const userguessnumber = parseInt(userguess);
+
+    if (!isNaN(userguessnumber)) {
+      console.log( message );
+      attempts++;
+
+      if (userguessnumber === statesvisited) {
+        console.log( message );
+        alert(`You guessed the correct number in ${attempts} attempt(s).`);
+      } else if (userguessnumber < statesvisited) {
+        console.log( message );
+        alert('Too low, try again.');
+        guessNumber();
+      } else {
+        console.log( message );
+        alert('Too high, try again.');
+        guessNumber();
+      }
+    } else {
+      console.log( message );
+      alert('Please enter a number.');
+      guessNumber();
+    }
+  } else {
+    console.log( message );
+    alert(`You've used all your attempts. The correct number was ${statesvisited}.`);
+  }
+}
+
+guessNumber();
+
+//Question 7
+const correctcolors = ['black', 'green', 'red', 'orange'];
+
+const maxtries = 6;
+
+let tries = 0;
+
+let correctanswer = false;
+
+let correctcount = 0;
+
+while (tries < maxtries && !correctanswer) {
+  console.log( message );
+  const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
+
+  if (correctcolors.includes(usercolor.toLowerCase())) {
+    console.log( message );
+    alert('That\'s one of the correct colors!');
+    correctanswer = true;
+  } else {
+    console.log( message );
+    alert('Sorry, that\'s not one of the correct colors.');
+    tries++;
+  }
+}
+
+if (!correctanswer) {
+  console.log();
+  alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
+}
+
+
+
+//Closing Question
+
+alert(`Wow ` + person `you got ${correctcount} correct out of 7 questions!`);
+
+console.log(`Total correct answers: ${correctcount}`);
