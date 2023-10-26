@@ -103,34 +103,32 @@ let attempts = 0;
 
 function guessNumber() {
   if (attempts < maxattempts) {
-    console.log( 'message' );
+    console.log( 'You have 4 attempts.' );
     const userguess = prompt(`How many states have I visited? You have ${maxattempts - attempts} attempt(s) left:`);
     const userguessnumber = parseInt(userguess);
 
     if (!isNaN(userguessnumber)) {
-      console.log( 'message' );
       attempts++;
 
       if (userguessnumber === statesvisited) {
-        console.log( 'message' );
         alert(`You guessed the correct number in ${attempts} attempt(s).`);
         correctcount++;
       } else if (userguessnumber < statesvisited) {
-        console.log( 'message' );
+        console.log( 'Too low try higher.' );
         alert('Too low, try again.');
         guessNumber();
       } else {
-        console.log( 'message' );
+        console.log( 'Too high try lower.' );
         alert('Too high, try again.');
         guessNumber();
       }
     } else {
-      console.log( 'message' );
+      console.log( 'Not a valid number.' );
       alert('Please enter a number.');
       guessNumber();
     }
   } else {
-    console.log( 'message' );
+    console.log( 'Used all attempts.' );
     alert(`You've used all your attempts. The correct number was ${statesvisited}.`);
   }
 }
@@ -147,23 +145,23 @@ let tries = 0;
 let correctanswer = false;
 
 while (tries < maxtries && !correctanswer) {
-  console.log( 'message' );
+  console.log( 'You have 6 tries.' );
   const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
 
   if (correctcolors.includes(usercolor.toLowerCase())) {
-    console.log( 'message' );
+    console.log( 'Chose correct color.' );
     alert('That\'s one of the correct colors!');
     correctanswer = true;
     correctcount++;
   } else {
-    console.log( 'message' );
+    console.log( 'Chose wrong color.' );
     alert('Sorry, that\'s not one of the correct colors.');
     tries++;
   }
 }
 
 if (!correctanswer) {
-  console.log();
+  console.log( 'No more tries left.' );
   alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
 }
 
