@@ -19,7 +19,7 @@ console.log(years);
 if(normalizedyears === 'yes'){
   console.log('You are correct, but that makes me old!');
   alert('You are right, ' + years + ' that is a long time.');
-  alert(`Yes, ${years} is correct`);
+
   correctcount++;
 } else {
   console.log('Please try again...');
@@ -36,7 +36,7 @@ console.log(weird);
 if(normalizedweird === 'yes'){
   console.log('That is right, it is a unique combination!');
   alert('You are correct, ' + weird + ' it is not everyday you see that.');
-  alert(`Yes, ${weird} is correct`);
+
   correctcount++;
 } else {
   console.log('Please try again...');
@@ -53,7 +53,7 @@ console.log(plane);
 if(normalizedplane === 'yes'){
   console.log('That is right, it is a unique combination!');
   alert('You are absolutely right, ' + plane + ' it was the biggest rush of my life everytime!');
-  alert(`Yes, ${plane} is correct`);
+
   correctcount++;
 } else {
   console.log('Please try again...');
@@ -70,7 +70,7 @@ console.log(cookies);
 if(normalizedcookies === 'no'){
   console.log('No kidding, something so easy and I over or under cook them every time!');
   alert( cookies + ' kidding it is very embarassing asking family and freinds to bake them for me!');
-  alert(`Yes, ${cookies} is correct`);
+
   correctcount++;
 } else {
   console.log('Please try again...');
@@ -87,7 +87,7 @@ console.log(doggy);
 if(normalizeddoggy === 'yes'){
   console.log('I could not beleive it myself but it is true!');
   alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
-  alert(`Yes, ${doggy} is correct`);
+
   correctcount++;
 } else {
   console.log('Please try again...');
@@ -169,6 +169,6 @@ if (!correctanswer) {
 
 //Closing Question
 
-alert('Wow ' + person `you got ${correctcount} correct out of 7 questions!`);
+alert('Wow ' + person + `you got ${correctcount} correct out of 7 questions!`);
 
 console.log(`Total correct answers: ${correctcount}`);
