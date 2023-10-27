@@ -84,7 +84,7 @@ let normalizeddoggy = doggy.toLowerCase();
 
 console.log(doggy);
 
-if(normalizeddoggy === 'yes'){
+if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
   console.log('I could not beleive it myself but it is true!');
   alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
 
@@ -150,7 +150,7 @@ while (tries < maxtries && !correctanswer) {
 
   if (correctcolors.includes(usercolor.toLowerCase())) {
     console.log( 'Chose correct color.' );
-    alert('That\'s one of the correct colors!');
+    alert(`That's one of the correct colors! The correct colors are: ${correctcolors(', ')}.`);
     correctanswer = true;
     correctcount++;
   } else {
@@ -169,6 +169,6 @@ if (!correctanswer) {
 
 //Closing Question
 
-alert('Wow ' + person + `you got ${correctcount} correct out of 7 questions!`);
+alert('Wow ' + person + ` you got ${correctcount} correct out of 7 questions!`);
 
 console.log(`Total correct answers: ${correctcount}`);
