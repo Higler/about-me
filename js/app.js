@@ -93,9 +93,11 @@ function askDoggy(){
 
   console.log(doggy);
 
-  if(normalizeddoggy === 'yes'){
-    console.log('I could not beleive it myself but it is true!');
-    alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
+
+if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
+  console.log('I could not beleive it myself but it is true!');
+  alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
+
 
     correctcount++;
   } else {
@@ -160,16 +162,17 @@ function askColors(){
     console.log( 'You have 6 tries.' );
     const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
 
-    if (correctcolors.includes(usercolor.toLowerCase())) {
-      console.log( 'Chose correct color.' );
-      alert('That\'s one of the correct colors!');
-      correctanswer = true;
-      correctcount++;
-    } else {
-      console.log( 'Chose wrong color.' );
-      alert('Sorry, that\'s not one of the correct colors.');
-      tries++;
-    }
+
+  if (correctcolors.includes(usercolor.toLowerCase())) {
+    console.log( 'Chose correct color.' );
+    alert(`That's one of the correct colors! The correct colors are: ${correctcolors(', ')}.`);
+    correctanswer = true;
+    correctcount++;
+  } else {
+    console.log( 'Chose wrong color.' );
+    alert('Sorry, that\'s not one of the correct colors.');
+    tries++;
+
   }
 
   if (!correctanswer) {
