@@ -17,7 +17,7 @@ function askYears(){
 
   console.log(years);
 
-  if(normalizedyears === 'yes'){
+  if(normalizedyears === 'yes'|| normalized === 'y'){
     console.log('You are correct, but that makes me old!');
     alert('You are right, ' + years + ' that is a long time.');
 
@@ -36,7 +36,7 @@ function askWeird(){
 
   console.log(weird);
 
-  if(normalizedweird === 'yes'){
+  if(normalizedweird === 'yes'|| normalized === 'y'){
     console.log('That is right, it is a unique combination!');
     alert('You are correct, ' + weird + ' it is not everyday you see that.');
 
@@ -55,7 +55,7 @@ function askPlane(){
 
   console.log(plane);
 
-  if(normalizedplane === 'yes'){
+  if(normalizedplane === 'yes'|| normalized ==='y'){
     console.log('That is right, it is a unique combination!');
     alert('You are absolutely right, ' + plane + ' it was the biggest rush of my life everytime!');
 
@@ -74,7 +74,7 @@ function askCookies(){
 
   console.log(cookies);
 
-  if(normalizedcookies === 'no'){
+  if(normalizedcookies === 'no'|| normalized === 'n'){
     console.log('No kidding, something so easy and I over or under cook them every time!');
     alert( cookies + ' kidding it is very embarassing asking family and freinds to bake them for me!');
 
@@ -149,39 +149,41 @@ function guessNumber() {
 guessNumber();
 
 //Question 7
-function askColors(){
-  const correctcolors = ['black', 'green', 'red', 'orange'];
+function askColors() {
+  const correctColors = ['black', 'green', 'red', 'orange'];
 
-  const maxtries = 6;
+  const maxTries = 6;
 
   let tries = 0;
+  let correctCount = 0;
+  let correctAnswer = false;
 
-  let correctanswer = false;
+  while (tries < maxTries && !correctAnswer) {
+    console.log(`You have ${maxTries - tries} attempt(s) left.`);
+    const userColor = prompt(`What is my favorite color? You have ${maxTries - tries} attempt(s) left:`);
 
-  while (tries < maxtries && !correctanswer) {
-    console.log( 'You have 6 tries.' );
-    const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
-
-
-  if (correctcolors.includes(usercolor.toLowerCase())) {
-    console.log( 'Chose correct color.' );
-    alert(`That's one of the correct colors! The correct colors are: ${correctcolors(', ')}.`);
-    correctanswer = true;
-    correctcount++;
-  } else {
-    console.log( 'Chose wrong color.' );
-    alert('Sorry, that\'s not one of the correct colors.');
-    tries++;
-
+    if (correctColors.includes(userColor.toLowerCase())) {
+      console.log('Chose correct color.');
+      alert(`That's one of the correct colors! The correct colors are: ${correctColors.join(', ')}.`);
+      correctAnswer = true;
+      correctCount++;
+    } else {
+      console.log('Chose wrong color.');
+      alert("Sorry, that's not one of the correct colors.");
+      tries++;
+    }
   }
 
-  if (!correctanswer) {
-    console.log( 'No more tries left.' );
-    alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
+  if (!correctAnswer) {
+    console.log('No more tries left.');
+    alert(`You've used all your tries. The correct colors are: ${correctColors.(', ')}.`);
+  } else {
+    console.log(`You got ${correctCount} correct color(s).`);
   }
 }
 
 askColors();
+
 
 //Closing Question
 
