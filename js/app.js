@@ -7,94 +7,107 @@ alert('Its very nice to meet you ' + person);
 
 console.log(person);
 
-// Question 1
-let years = prompt ('Do you think I have been writing code for 20 years?');
-
-let normalizedyears = years.toLowerCase();
-
 let correctcount = 0;
 
-console.log(years);
+// Question 1
+function askYears(){
+  let years = prompt ('Do you think I have been writing code for 20 years?');
 
-if(normalizedyears === 'yes'){
-  console.log('You are correct, but that makes me old!');
-  alert('You are right, ' + years + ' that is a long time.');
+  let normalizedyears = years.toLowerCase();
 
-  correctcount++;
-} else {
-  console.log('Please try again...');
-  alert('Incorrect');
+  console.log(years);
+
+  if(normalizedyears === 'yes'){
+    console.log('You are correct, but that makes me old!');
+    alert('You are right, ' + years + ' that is a long time.');
+
+    correctcount++;
+  } else {
+    console.log('Please try again...');
+    alert('Incorrect');
+  }
 }
-
+askYears();
 //Question 2
-let weird = prompt ('Would you beleive I can not only build a race car but also a video game?');
+function askWeird(){
+  let weird = prompt ('Would you beleive I can not only build a race car but also a video game?');
 
-let normalizedweird = weird.toLowerCase();
+  let normalizedweird = weird.toLowerCase();
 
-console.log(weird);
+  console.log(weird);
 
-if(normalizedweird === 'yes'){
-  console.log('That is right, it is a unique combination!');
-  alert('You are correct, ' + weird + ' it is not everyday you see that.');
+  if(normalizedweird === 'yes'){
+    console.log('That is right, it is a unique combination!');
+    alert('You are correct, ' + weird + ' it is not everyday you see that.');
 
-  correctcount++;
-} else {
-  console.log('Please try again...');
-  alert('Incorrect');
+    correctcount++;
+  } else {
+    console.log('Please try again...');
+    alert('Incorrect');
+  }
 }
-
+askWeird();
 //Question 3
-let plane = prompt ('Do you think I have launched air planes from the flight deck of a carrier?');
+function askPlane(){
+  let plane = prompt ('Do you think I have launched air planes from the flight deck of a carrier?');
 
-let normalizedplane = plane.toLowerCase();
+  let normalizedplane = plane.toLowerCase();
 
-console.log(plane);
+  console.log(plane);
 
-if(normalizedplane === 'yes'){
-  console.log('That is right, it is a unique combination!');
-  alert('You are absolutely right, ' + plane + ' it was the biggest rush of my life everytime!');
+  if(normalizedplane === 'yes'){
+    console.log('That is right, it is a unique combination!');
+    alert('You are absolutely right, ' + plane + ' it was the biggest rush of my life everytime!');
 
-  correctcount++;
-} else {
-  console.log('Please try again...');
-  alert('Incorrect');
+    correctcount++;
+  } else {
+    console.log('Please try again...');
+    alert('Incorrect');
+  }
 }
-
+askPlane();
 //Question 4
-let cookies = prompt ('Do you think I can bake the premade cookies?');
+function askCookies(){
+  let cookies = prompt ('Do you think I can bake the premade cookies?');
 
-let normalizedcookies = cookies.toLowerCase();
+  let normalizedcookies = cookies.toLowerCase();
 
-console.log(cookies);
+  console.log(cookies);
 
-if(normalizedcookies === 'no'){
-  console.log('No kidding, something so easy and I over or under cook them every time!');
-  alert( cookies + ' kidding it is very embarassing asking family and freinds to bake them for me!');
+  if(normalizedcookies === 'no'){
+    console.log('No kidding, something so easy and I over or under cook them every time!');
+    alert( cookies + ' kidding it is very embarassing asking family and freinds to bake them for me!');
 
-  correctcount++;
-} else {
-  console.log('Please try again...');
-  alert('Incorrect');
+    correctcount++;
+  } else {
+    console.log('Please try again...');
+    alert('Incorrect');
+  }
 }
-
+askCookies();
 //Question 5
-let doggy = prompt ('Do you think I had a dog that was in the news paper and called a local hero?');
+function askDoggy(){
+  let doggy = prompt ('Do you think I had a dog that was in the news paper and called a local hero?');
 
-let normalizeddoggy = doggy.toLowerCase();
+  let normalizeddoggy = doggy.toLowerCase();
 
-console.log(doggy);
+  console.log(doggy);
+
 
 if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
   console.log('I could not beleive it myself but it is true!');
   alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
 
-  correctcount++;
-} else {
-  console.log('Please try again...');
-  alert('Incorrect');
-}
 
+    correctcount++;
+  } else {
+    console.log('Please try again...');
+    alert('Incorrect');
+  }
+}
+askDoggy();
 //Question 6
+
 const statesvisited = 42;
 
 const maxattempts = 4;
@@ -136,17 +149,19 @@ function guessNumber() {
 guessNumber();
 
 //Question 7
-const correctcolors = ['black', 'green', 'red', 'orange'];
+function askColors(){
+  const correctcolors = ['black', 'green', 'red', 'orange'];
 
-const maxtries = 6;
+  const maxtries = 6;
 
-let tries = 0;
+  let tries = 0;
 
-let correctanswer = false;
+  let correctanswer = false;
 
-while (tries < maxtries && !correctanswer) {
-  console.log( 'You have 6 tries.' );
-  const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
+  while (tries < maxtries && !correctanswer) {
+    console.log( 'You have 6 tries.' );
+    const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
+
 
   if (correctcolors.includes(usercolor.toLowerCase())) {
     console.log( 'Chose correct color.' );
@@ -157,15 +172,16 @@ while (tries < maxtries && !correctanswer) {
     console.log( 'Chose wrong color.' );
     alert('Sorry, that\'s not one of the correct colors.');
     tries++;
+
+  }
+
+  if (!correctanswer) {
+    console.log( 'No more tries left.' );
+    alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
   }
 }
 
-if (!correctanswer) {
-  console.log( 'No more tries left.' );
-  alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
-}
-
-
+askColors();
 
 //Closing Question
 

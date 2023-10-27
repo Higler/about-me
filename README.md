@@ -41,3 +41,6 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 ### Reflections and Comments
 
 Today was a very challenging day working almost entirely in javascript for me, but I did manage to learn a lot of new techniques and foundations or building blocks about javascript that will help me going forward. Being more open minded and tryign to thinkin in simpler terms today really helped me with the javascript today, and made the day hard which would of otherwise been impossible.
+
+
+Worked on by Joshua Watts and Errol Vidad both together.
