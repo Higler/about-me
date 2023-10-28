@@ -3,7 +3,7 @@
 //Opening Question
 let person = prompt('What is your name?');
 
-alert('Its very nice to meet you ' + person);
+alert('Its very nice to meet you ' + person + 'Please answer the questions  with a Yes or No (Y or N will also work)');
 
 console.log(person);
 
