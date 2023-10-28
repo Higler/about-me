@@ -44,3 +44,25 @@ Today was a very challenging day working almost entirely in javascript for me, b
 
 
 Worked on by Joshua Watts and Errol Vidad both together.
+
+
+# LAB - Number 05
+
+## Project Name about me
+
+I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+
+### Author: Student/Group Name joshua watts
+
+### Links and Resources chatgpt
+
+* [submission PR](http://xyz.com)
+* Any Links you used as reference
+
+### Lighthouse Accessibility Report Score 100
+
+![lighthouse screenshot](lab5lighthouse.PNG)
+
+### Reflections and Comments
+
+Today was more difficult than I thought in the process of refactoring my questions to read and run better I kept having more issues, but I was able to finally make them run correctly. I also had the same issues with CSS I would make one thing better and break something else, but I was able to over come in the end. I learned that sometimes simple is better as the old saying goes.
