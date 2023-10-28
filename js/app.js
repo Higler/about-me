@@ -166,7 +166,7 @@ function askColors(){
 
     if (correctcolors.includes(usercolor.toLowerCase())) {
       console.log( 'Chose correct color.' );
-      alert(`That's one of the correct colors! The correct colors are: ${correctcolors(', ')}.`);
+      alert(`That's one of the correct colors! The correct colors are: ${correctcolors.toString()}.`);
       correctanswer = true;
       correctcount++;
     } else {
