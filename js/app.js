@@ -17,7 +17,7 @@ function askYears(){
 
   console.log(years);
 
-  if(normalizedyears === 'yes'|| normalized === 'y'){
+  if(normalizedyears === 'yes'|| normalizedyears === 'y'){
     console.log('You are correct, but that makes me old!');
     alert('You are right, ' + years + ' that is a long time.');
 
@@ -27,7 +27,7 @@ function askYears(){
     alert('Incorrect');
   }
 }
-askYears();
+
 //Question 2
 function askWeird(){
   let weird = prompt ('Would you beleive I can not only build a race car but also a video game?');
@@ -36,7 +36,7 @@ function askWeird(){
 
   console.log(weird);
 
-  if(normalizedweird === 'yes'|| normalized === 'y'){
+  if(normalizedweird === 'yes'|| normalizedweird === 'y'){
     console.log('That is right, it is a unique combination!');
     alert('You are correct, ' + weird + ' it is not everyday you see that.');
 
@@ -46,7 +46,7 @@ function askWeird(){
     alert('Incorrect');
   }
 }
-askWeird();
+
 //Question 3
 function askPlane(){
   let plane = prompt ('Do you think I have launched air planes from the flight deck of a carrier?');
@@ -55,7 +55,7 @@ function askPlane(){
 
   console.log(plane);
 
-  if(normalizedplane === 'yes'|| normalized ==='y'){
+  if(normalizedplane === 'yes'|| normalizedplane ==='y'){
     console.log('That is right, it is a unique combination!');
     alert('You are absolutely right, ' + plane + ' it was the biggest rush of my life everytime!');
 
@@ -65,7 +65,7 @@ function askPlane(){
     alert('Incorrect');
   }
 }
-askPlane();
+
 //Question 4
 function askCookies(){
   let cookies = prompt ('Do you think I can bake the premade cookies?');
@@ -74,7 +74,7 @@ function askCookies(){
 
   console.log(cookies);
 
-  if(normalizedcookies === 'no'|| normalized === 'n'){
+  if(normalizedcookies === 'no'|| normalizedcookies === 'n'){
     console.log('No kidding, something so easy and I over or under cook them every time!');
     alert( cookies + ' kidding it is very embarassing asking family and freinds to bake them for me!');
 
@@ -84,7 +84,7 @@ function askCookies(){
     alert('Incorrect');
   }
 }
-askCookies();
+
 //Question 5
 function askDoggy(){
   let doggy = prompt ('Do you think I had a dog that was in the news paper and called a local hero?');
@@ -94,9 +94,9 @@ function askDoggy(){
   console.log(doggy);
 
 
-if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
-  console.log('I could not beleive it myself but it is true!');
-  alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
+  if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
+    console.log('I could not beleive it myself but it is true!');
+    alert( doggy + ' he stopped and detained a home invader linked to 7 other home invasions, the police wanted to hire him!');
 
 
     correctcount++;
@@ -105,7 +105,7 @@ if(normalizeddoggy === 'yes'|| normalizeddoggy === 'y'){
     alert('Incorrect');
   }
 }
-askDoggy();
+
 //Question 6
 
 const statesvisited = 42;
@@ -146,45 +146,55 @@ function guessNumber() {
   }
 }
 
-guessNumber();
+
 
 //Question 7
-function askColors() {
-  const correctColors = ['black', 'green', 'red', 'orange'];
+function askColors(){
 
-  const maxTries = 6;
+  const correctcolors = ['black', 'green', 'red', 'orange'];
+
+  const maxtries = 6;
 
   let tries = 0;
-  let correctCount = 0;
-  let correctAnswer = false;
 
-  while (tries < maxTries && !correctAnswer) {
-    console.log(`You have ${maxTries - tries} attempt(s) left.`);
-    const userColor = prompt(`What is my favorite color? You have ${maxTries - tries} attempt(s) left:`);
+  let correctanswer = false;
 
-    if (correctColors.includes(userColor.toLowerCase())) {
-      console.log('Chose correct color.');
-      alert(`That's one of the correct colors! The correct colors are: ${correctColors.join(', ')}.`);
-      correctAnswer = true;
-      correctCount++;
+  while (tries < maxtries && !correctanswer) {
+    console.log( 'You have 6 tries.' );
+    const usercolor = prompt(`What is my favorite color? You have ${maxtries - tries} attempt(s) left:`);
+
+
+    if (correctcolors.includes(usercolor.toLowerCase())) {
+      console.log( 'Chose correct color.' );
+      alert(`That's one of the correct colors! The correct colors are: ${correctcolors(', ')}.`);
+      correctanswer = true;
+      correctcount++;
     } else {
-      console.log('Chose wrong color.');
-      alert("Sorry, that's not one of the correct colors.");
+      console.log( 'Chose wrong color.' );
+      alert('Sorry, that\'s not one of the correct colors.');
       tries++;
-    }
-  }
 
-  if (!correctAnswer) {
-    console.log('No more tries left.');
-    alert(`You've used all your tries. The correct colors are: ${correctColors.(', ')}.`);
-  } else {
-    console.log(`You got ${correctCount} correct color(s).`);
+    }
+
+    if (!correctanswer) {
+      console.log( 'No more tries left.' );
+      alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
+    }
   }
 }
 
-askColors();
 
+function startQuiz(){
+  askYears();
+  askWeird();
+  askPlane();
+  askCookies();
+  askDoggy();
+  guessNumber();
+  askColors();
+}
 
+startQuiz();
 //Closing Question
 
 alert('Wow ' + person + ` you got ${correctcount} correct out of 7 questions!`);

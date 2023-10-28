@@ -48,22 +48,28 @@ li:hover {
   text-decoration: underline;
 }
 
+
 p{
   margin: 10px 2px;
   line-height: 1.6;
+  text-align: center;
 }
 
 main ul, main ol{
   margin-left: 20px;
   margin-bottom:10px;
+  display:inline-block
 }
 
+
 main ul{
-  list-style-type: lower-roman;
+  list-style-type:square;
+  margin: 0 25%;
 }
 
 main ol{
-  list-style-type:upper-roman;
+  list-style-type:square;
+  margin: 0 25%;
 }
 
 footer{
