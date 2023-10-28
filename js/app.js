@@ -178,7 +178,7 @@ function askColors(){
 
     if (!correctanswer) {
       console.log( 'No more tries left.' );
-      alert(`You've used all your tries. The correct colors are: ${correctcolors(', ')}.`);
+      alert(`You've used all your tries. The correct colors are: ${correctcolors.toString()}.`);
     }
   }
 }
