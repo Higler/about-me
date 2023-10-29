@@ -68,7 +68,7 @@ main ul{
 }
 
 main ol{
-  list-style-type:square;
+  list-style-type:roman;
   margin: 0 25%;
 }
 
